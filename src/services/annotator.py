@@ -37,7 +37,7 @@ def annotator(image_url, predictions):
         color_palette = sv.ColorPalette.LEGACY
 
         # Create a ColorAnnotator and annotate the image with predictions
-        percentage_bar_annotator = sv.PercentageBarAnnotator(color=color_palette)
+        percentage_bar_annotator = sv.PercentageBarAnnotator(color=color_palette, color_lookup=sv.ColorLookup.CLASS)
         annotated_frame = percentage_bar_annotator.annotate(
             scene=image.copy(),
             detections=detections
