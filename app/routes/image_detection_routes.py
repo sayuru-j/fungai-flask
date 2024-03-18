@@ -1,5 +1,5 @@
 from flask import Blueprint, request, jsonify
-from app.utils.image_det_test import predict__image
+from run.utils.image_det_test import predict__image
 
 image_detection_routes = Blueprint("image_detection", __name__)
 
